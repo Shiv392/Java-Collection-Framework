@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-public class CollectionList {
+public class ArrayListClass {
     public static void main(String[] args) {
         
         //define array list
@@ -17,6 +17,10 @@ public class CollectionList {
         list.add(30);
         list.add(40);
         list.add(50);
+
+        //declare list with default value using Arrays.asList();
+        List<Integer>default_list = Arrays.asList(10,20,30,40,50);
+
 
         //size() : returns the size of the list
         int size = list.size();
