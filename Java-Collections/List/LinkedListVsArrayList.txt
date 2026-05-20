@@ -1,0 +1,48 @@
+Operation	ArrayList	LinkedList
+
+get(index)	🟢 O(1)	🔴 O(n)
+add(end)	🟢 O(1) amortized	🟢 O(1)
+remove(end/head)	🟢 O(1)	🟢 O(1)
+add/remove middle	🔴 O(n)	🟡 O(n)*
+
+*LinkedList needs traversal first.
+
+🚀 When to Use ArrayList
+Use when:
+
+✅ Frequent reading/access
+✅ Random indexing
+✅ Iteration-heavy apps
+✅ Better memory/cache performance
+
+Example:
+users.get(5000);
+
+Very fast because arrays use contiguous memory. [1] [4]
+
+Best for:
+APIs
+Dashboards
+Game objects
+Most production apps
+🔗 When to Use LinkedList
+
+Use when:
+✅ Frequent insert/delete at head/tail
+✅ Queue/Deque implementation
+✅ Constant node manipulation
+
+Example:
+list.addFirst(data);
+list.removeFirst();
+
+Best for:
+Queues
+Browser history
+Undo/redo systems
+🧠 Senior Engineer Reality
+
+In real-world Java:
+ArrayList is used ~90% of the time
+
+Because CPU cache efficiency makes it much faster overall.
