@@ -24,8 +24,9 @@ Replaces old array
 
 Growth Formula (approx):
 
-newCapacity = oldCapacity + (oldCapacity / 2)
-
+newCapacity = oldCapacity + (oldCapacity / 2);
+newCapacity = 1.5*(oldCapacity);
+then first it copies all element of the old array then add new element.
 Example:
 
 10 → 15 → 22 → 33 ...
