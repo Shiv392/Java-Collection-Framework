@@ -1,4 +1,5 @@
-package List;
+package ArrayList;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -11,16 +12,18 @@ public class ArrayListClass {
         List<Integer>list = new ArrayList<>();
         //we can also create list with given size by passing size into th (size);
 
-        //add() add elements into the list
+        //add() add elements into the list 
         list.add(10);
         list.add(20);
         list.add(30);
         list.add(40);
         list.add(50);
 
+        //set(index, element) : used to update element with given index
+        list.set(0, 100);
+
         //declare list with default value using Arrays.asList();
         List<Integer>default_list = Arrays.asList(10,20,30,40,50);
-
 
         //size() : returns the size of the list
         int size = list.size();
