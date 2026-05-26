@@ -14,16 +14,23 @@ HashMap
 🧠 Internal Working
 
 When you add data:
-Object ka hashCode() generate hota hai
-Hash calculate hota hai
-Element bucket me store hota hai
-HashSet<Integer> set = new HashSet<>();
+1. When we add a key like "Shiv" into a HashSet, Java first generates a hashCode() for that object. [4]
+Using this hash value, an index is calculated for the bucket array internally done using hashing logic.
+2. HashSet internally uses a dynamic bucket array. At the calculated index:
+If the bucket is empty, a new node is inserted.
+The node stores:
+the actual value
+reference to the next node (next pointer).
+3. Average insertion time is O(1).
+4. If multiple elements map to the same bucket (collision), nodes are connected using a linked list.
+5. In Java 8+, if collisions in one bucket become too high (bucket size > 8), the linked list is converted into a Red-Black Tree to improve search performance from:
+O(N) → O(log N). [4]
 
 ⚡ Time Complexity
 Operation	Complexity
 add()	🟢 O(1)
 remove()	🟢 O(1)
-contains()	🟢 O(1)
+contains()	🟢 O(1) worst case O(n)
 Iteration	🟡 O(n)
 
 Worst case:
