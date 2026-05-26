@@ -39,4 +39,4 @@ clear()	Remove all
 Map Classes -->
 1. HashMap : it internally hash key into their hashIndex so that searching can be faster here order of the key would not be same or it is unpredectibe. 
 2. TreeMap : Stores key and value in the sorted order in terms of their keys. 
-3. LinkedListMap : Store key, value with their exact order as they were adding. 
+3. LinkedHashMap : Store key, value with their exact order as they were adding. 
